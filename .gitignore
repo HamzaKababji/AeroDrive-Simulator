@@ -1,0 +1,20 @@
+#! SECRETS
+NOTES.md
+
+# Build artefacts
+Binaries/
+Intermediate/
+Saved/
+DerivedDataCache/
+
+# IDE folders
+.vs/
+.vscode/
+AeroDriveSimulator.code-workspace
+
+# User files
+*.suo
+*.user
+
+# Assets
+Content/
