@@ -95,6 +95,16 @@ void AAeroDriveSimulatorPawn::SetupPlayerInputComponent(class UInputComponent* P
 void AAeroDriveSimulatorPawn::Tick(float Delta)
 {
 	Super::Tick(Delta);
+    if (GEngine)
+    {
+      GEngine->AddOnScreenDebugMessage(
+        -1, 5.f, FColor::Red,
+        TEXT("Pawn::BeginPlay() is running!")
+      );
+    }
+	//! Test code to ensure the Tick function is running
+	UE_LOG(LogTemp, Warning, TEXT("Pawn Tick: %f"), Delta);
+	UE_LOG(LogTemplateVehicle, Log, TEXT("AAeroDriveSimulatorPawn::Tick called with Delta: %f"), Delta);
 
 	// add some angular damping if the vehicle is in midair
 	bool bMovingOnGround = ChaosVehicleMovement->IsMovingOnGround();
